@@ -9,6 +9,8 @@ import { CardGame } from "./pages/cardGame/cardGame";
 import { Proposal } from "./pages/proposal/proposal";
 import { AboutUs } from "./pages/aboutUs/aboutUs";
 import MBTI from "./pages/MBTI/MBTI";
+import { Pokewiki } from "./pages/Pokewiki/Pokewiki";
+import { PokewikiDetails } from "./pages/Pokewiki/PokewikiDetails";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -26,7 +28,16 @@ function App() {
         <Route exact path="/Proposal" element={<Proposal />} />
         <Route exact path="/About_Us" element={<AboutUs />} />
         <Route exact path="/MBTI" element={<MBTI />} />
-      </Routes>
+        <Route exact path="/Pokewiki" element={<Pokewiki />} />
+        {[...Array(152).keys()].map(i => (
+          <Route
+            key={i}
+            exact
+            path={`/Pokewiki/${i}`}
+            element={<PokewikiDetails />}
+          />
+        ))}
+      </Routes> 
       <Footer />
     </React.StrictMode>
   );
