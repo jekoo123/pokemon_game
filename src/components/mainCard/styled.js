@@ -10,9 +10,9 @@ export const Container = styled.div`
   background: ${(props) => {
     switch (props.colorKey) {
       case 0:
-        return "linear-gradient(to bottom, #EBFFE7, #D1FFC7)"; 
+        return "linear-gradient(to bottom, #EBFFE7, #D1FFC7)";
       case 1:
-        return "linear-gradient(to right, #DCFFFE,#B7FFFA )"; 
+        return "linear-gradient(to right, #DCFFFE,#B7FFFA )";
       case 2:
         return "linear-gradient(to top left, white, #C9FFCF, white)";
       default:
@@ -22,18 +22,17 @@ export const Container = styled.div`
   transition: all 0.3s ease;
 `;
 
-
 export const InfoContainer = styled.div`
-  opacity:0;
-  margin-left:80px;
-
+  opacity: 0;
+  margin-left: 120px;
+  width:600px;
 `;
 
 export const Info = styled.div`
-  font-size:27px;
-  font-weight:bold;
-  color:#0E4791;
-  margin-bottom:20px;
+  font-size: 27px;
+  font-weight: bold;
+  color: #0e4791;
+  margin-bottom: 20px;
 `;
 
 export const CardContainer = styled(Link)`
@@ -50,7 +49,7 @@ export const CardContainer = styled(Link)`
   background-repeat: no-repeat;
   background-position: center;
   transition: all 0.3s ease;
-  
+  text-decoration: none;
 
   &::before {
     content: "";
@@ -85,7 +84,6 @@ export const CardContainer = styled(Link)`
   }
 `;
 
-
 export const CardText = styled.div`
   display: flex;
   justify-content: center;
@@ -100,4 +98,7 @@ export const CardText = styled.div`
   border-radius: 10px;
   margin-top: 210px;
   box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.4);
+
 `;
+
+

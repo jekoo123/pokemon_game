@@ -40,7 +40,7 @@ export const Randering = () => {
       discription: "포켓몬 캐릭터에 대해 알아보세요!",
       detail1: "캐릭터 이름 맞추기 게임!",
       detail2: "모르는 캐릭터도 알아보고 공부해요!",
-      src: "https://i.chzbgr.com/full/8525634816/h561129EB/pokemon-memes-raichu-gif",
+      src: "https://www.mkgifs.com/wp-content/uploads/2022/09/cool-pokemon-gifs.gif",
       route: "/CharacterGame",
     },
   ];

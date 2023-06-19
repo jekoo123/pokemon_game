@@ -1,15 +1,14 @@
 .testpage{
-
-    height: 700px;
+    height: 300px;
     width: 550px;
     margin:0 auto;
     position: relative;
-    margin-top: 130px;
+    margin-top: 200px;
     text-align: center;
     padding-top:100px ;
+    
 }
-.Charcterflip { 
-
+.Charcterflip {
     width: 500px;
     height: 600px;
     visibility:hidden;
@@ -53,3 +52,4 @@
     padding-top:100px ;
     
 }
+

@@ -11,7 +11,9 @@ export const MainCardSection = (props) => {
   return (
     <Container colorKey={props.id}>
       <CardContainer to={props.route} src={props.src}>
-        <CardText>{props.name}</CardText>
+        <CardText>
+          {props.name}
+        </CardText>
       </CardContainer>
       <InfoContainer>
         <Info>{props.name}</Info>
