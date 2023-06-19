@@ -4,6 +4,9 @@ import axios from 'axios';
 import {Link} from "react-router-dom";
 
 export const Pokewiki = () => {
+
+    
+
     const [data, setData] = useState({results:[{name:" "},{name:" "}]});
 
     const Getapi = async() => {
@@ -14,6 +17,7 @@ export const Pokewiki = () => {
     
     return (
     <div class="body">
+      <button id="wiki_welcom">포켓몬 위키에 오신 것을 환영합니다!</button>
       <ul class="cardWrap">{data.results.map((pokeItem, index) => (
         <li class="card">
           <Link class="link" to={"/Pokewiki/"+String(index+1)} state={{index:index+1}}>

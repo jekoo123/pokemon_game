@@ -1,12 +1,30 @@
 import React from "react";
-import "./footer.css";
+import {
+  Container,
+  FooterContentContainer,
+  FooterContentLayoutContainer,
+  FooterContent,
+} from "./styled";
+
 function Footer() {
   return (
-    <div className="footer">
-      <div className="footer_content_container">
-        <div className="author">Author : 강제구, 윤영서, 전현정</div>
-      </div>
-    </div>
+    <Container>
+      <FooterContentContainer>
+        <FooterContentLayoutContainer>
+          <FooterContent>Author:</FooterContent>
+          <FooterContent> 강제구, 윤영서, 전현정</FooterContent>
+        </FooterContentLayoutContainer>
+
+        <FooterContentLayoutContainer>
+          <FooterContent>From: </FooterContent>
+          <FooterContent>Dongguk University</FooterContent>
+        </FooterContentLayoutContainer>
+        <FooterContentLayoutContainer>
+          <FooterContent>API Refenece:</FooterContent>
+          <FooterContent> pokeapi.co</FooterContent>
+        </FooterContentLayoutContainer>
+      </FooterContentContainer>
+    </Container>
   );
 }
 
