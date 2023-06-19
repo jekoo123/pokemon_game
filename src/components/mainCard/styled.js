@@ -42,7 +42,7 @@ export const CardContainer = styled(Link)`
   width: 330px;
   height: 330px;
   border-radius: 15px;
-  margin-left: 150px;
+  margin-left: 200px;
   box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.4);
   background-image: url(${(props) => props.src}});
   background-size: cover;
