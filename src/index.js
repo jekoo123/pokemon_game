@@ -17,6 +17,8 @@ import { Proposal } from "./pages/proposal/proposal";
 import { AboutUs } from "./pages/aboutUs/aboutUs";
 import { Result } from "./pages/cardGame/result/result";
 import MBTI from "./pages/MBTI/MBTI";
+import { Pokewiki } from "./pages/Pokewiki/Pokewiki";
+import { PokewikiDetails } from "./pages/Pokewiki/PokewikiDetails";
 import Error from "./pages/404Error/404";
 import CharacterGame from "./pages/CharacterGame/CharacterGame";
 import { Provider } from "react-redux";
@@ -46,10 +48,19 @@ function App() {
         <Route exact path="/Proposal" element={<Proposal />} />
         <Route exact path="/About_Us" element={<AboutUs />} />
         <Route exact path="/MBTI" element={<MBTI />} />
+        <Route exact path="/Pokewiki" element={<Pokewiki />} />
+        {[...Array(152).keys()].map(i => (
+          <Route
+            key={i}
+            exact
+            path={`/Pokewiki/${i}`}
+            element={<PokewikiDetails />}
+          />
+        ))}
         <Route exact path="/CharacterGame" element={<CharacterGame />} />
         <Route exact path="/Result" element={<Result />} />
         <Route path="*" element={<Error />} />
-      </Routes>
+      </Routes> 
       <Footer />
     </>
   );
