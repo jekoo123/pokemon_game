@@ -1,7 +1,14 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
-import { ResultPage, ResultMessage, Item, ItemContainer } from "./styled";
+import {
+  ResultPage,
+  ResultMessage,
+  Item,
+  ItemContainer,
+  HeadContainer,
+  HeadContents,
+} from "./styled";
 
 export const Result = () => {
   const [record, setRecord] = useState([]);
@@ -16,24 +23,28 @@ export const Result = () => {
     }
 
     if (data.id !== null && data.turn !== null) {
-      const temp = [...storedArray, [data.id, data.turn]];
+      const temp = [...storedArray, [data.id, data.result, data.turn]];
       localStorage.setItem("localstoragedata", JSON.stringify(temp));
       setRecord(temp);
     } else {
       setRecord(storedArray);
     }
   }, []);
-
   return (
     <ResultPage>
-      
       {record.length > 0 ? (
         <>
+          <HeadContainer>
+            <HeadContents>Name</HeadContents>
+            <HeadContents>결과</HeadContents>
+            <HeadContents>턴 수</HeadContents>
+          </HeadContainer>
           {record.map((item, index) => {
             return (
               <ItemContainer key={index}>
                 <Item>{item[0]}</Item>
                 <Item>{item[1]}</Item>
+                <Item>{item[2]}</Item>
               </ItemContainer>
             );
           })}

@@ -1,8 +1,9 @@
-import { SET_ID, SET_TURN } from "./actions";
+import { SET_ID, SET_TURN ,SET_RESULTS} from "./actions";
 
 const initialState = {
   id: null,
   turn: null,
+  result:null,
 };
 
 function rootReducer(state = initialState, action) {
@@ -11,8 +12,12 @@ function rootReducer(state = initialState, action) {
       return { ...state, id: action.payload };
     case SET_TURN:
       return { ...state, turn: action.payload };
+    case SET_RESULTS:
+      return { ...state, result: action.payload };
     default:
       return state;
   }
 }
 export default rootReducer;
+
+

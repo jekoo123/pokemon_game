@@ -8,7 +8,7 @@ import {
   FightingPokemon,
 } from "../../../components/cards/cards";
 import { useDispatch, useSelector } from "react-redux";
-import { setTurn } from "../../../storage/actions";
+import { setTurn,setResults } from "../../../storage/actions";
 import { Button } from "antd";
 
 import {
@@ -206,6 +206,13 @@ export const Game = () => {
         console.log("user.id",user.id)
         if (user.id !== null) {
           reduxdispatch(setTurn(state.turn));
+
+          if(state.myScore === 2){
+            reduxdispatch(setResults("승리"));
+          }
+          else{
+            reduxdispatch(setResults("패배"));
+          }
         }
         dispatch({ type: "SET_FINISH_MODAL", payload: true });
 
