@@ -77,15 +77,15 @@ export const PokewikiDetails = () => {
     };
 
     return(
-        <div class="body">
-            <div class="box">
-                <div class="img_wrap">
+        <div class="wikid_body">
+            <div class="wikid_box">
+                <div class="wikid_img_wrap">
                     <img src={"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/"+String(index)+".png"}></img>
                 </div>
                 <div>
-                    <p>{data.forms[0].name}</p>
-                    <p>No.{index}</p>
-                    <p>Type:</p>
+                    <p class="wikid_name">{data.forms[0].name}</p>
+                    <p class="wikid_no">No.{index}</p>
+                    <p class>Type:</p>
                     <div className="button-group">
                         {data.types.map((item, index) => (
                             <button
